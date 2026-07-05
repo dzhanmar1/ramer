@@ -111,7 +111,6 @@ export const useWindowStore = create<WindowState>((set, get) => ({
 
   undo: () => set((state) => {
     if (state.historyIndex >= 0) {
-      const prevConfig = state.history[state.historyIndex];
       // Push current config to next spot if we are at the end, so we can redo back to current?
       // Wait, if historyIndex is exactly at the end of history array, we need to save current config first!
       let newHistory = [...state.history];

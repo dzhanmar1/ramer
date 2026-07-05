@@ -24,7 +24,6 @@ interface SectionRendererProps {
 
 const SectionRenderer: React.FC<SectionRendererProps> = ({ section, x, y, w, h, onSelect, selectedId, onDragStart, splitSection, removeSplit, updateSection }) => {
   const isSelected = section.id === selectedId;
-  const t = useI18nStore(state => state.t);
 
   if (section.type === 'split-v') {
     const split = section.splitRatio || 0.5;
